@@ -44,3 +44,30 @@ console.log(hobbies)
 
 hobbies.splice(0,1)
 console.log(hobbies)
+
+const testResults = [1,5.3,1.5,10.99,-5,10]
+// const storeResults = testResults.slice(1,4);
+const storeResults = testResults.concat(3.99,2);
+
+testResults.push(5.91)
+
+console.log(storeResults,testResults)
+console.log(testResults.indexOf(-5))
+
+const personData = [{name:'Max'},{name:'Manuel'}]
+console.log(personData.indexOf({name:'Manuel'}))
+
+const manuel = personData.find((person,idx,persons) => {
+    return person.name === 'Manuel';
+});
+
+manuel.name = 'Anna';
+
+console.log(manuel,personData)
+
+const maxIndex = personData.findIndex((person,idx,persons) => {
+    return person.name === 'Max';
+});
+console.log(maxIndex)
+// console.log(testResults.slice())
+
