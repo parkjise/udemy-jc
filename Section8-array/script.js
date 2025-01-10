@@ -119,3 +119,13 @@ console.log(filterArray)
 
 const sum = prices.reduce((preValue,curValue) => preValue + curValue,0)
 console.log(sum)
+
+const data = 'new york;10.99;2000'
+
+const transformedData = data.split(';');
+transformedData[1] = +transformedData[1]; //transformedData[1]에 있는 문자열 '10.99'을 숫자로 변환합니다.
+console.log(transformedData);
+
+const nameFragements= ['Max','Schwarz'] 
+const name = nameFragements.join(' ')// 배열의 요소를 공백(' ')으로 연결해 문자열 'Max Schwarz' 생성
+console.log(name)
