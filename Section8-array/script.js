@@ -129,3 +129,28 @@ console.log(transformedData);
 const nameFragements= ['Max','Schwarz'] 
 const name = nameFragements.join(' ')// 배열의 요소를 공백(' ')으로 연결해 문자열 'Max Schwarz' 생성
 console.log(name)
+
+const copieNameFragments = [...nameFragements];
+nameFragements.push('Mr');
+console.log(nameFragements,copieNameFragments);
+
+console.log(Math.min(...prices))
+
+const person = [
+	{name:'Js Park',age:45},
+	{name:'Gd Hong',age:41},
+]
+
+// const copiedPersons=[...person];
+const copiedPersons=person.map(person => ({
+	name:person.name,
+	age:person.age
+}));
+person.push({name:'Anna',age:30})
+person[0].age = 20;
+console.log(person,copiedPersons)
+
+const nameData = ['Max','Schwarz','Mr',30]
+
+const [firstName,lastName,...otherInformation] = nameData;
+console.log(firstName,lastName,otherInformation)
